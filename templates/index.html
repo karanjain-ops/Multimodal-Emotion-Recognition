@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Multimodal Emotion Recognition</title>
+
+  </head>
+  <body>
+    <a href="/">
+      <img src = "/static/CSS/images/head.png" width="100%">
+    </a>
+    <br>
+
+ {% block body %}
+
+  <!--
+  Video Interview presentation
+  -->
+  <div class="row">
+      <div class="column_home" id="left-col" align="center">
+        <img src = "/static/CSS/images/video.png" width="100%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Use the video channel and get a feedback on how the algorithm interprets your facial emotions compared to other users.</p>
+          <br>
+          <p> Our algorithms processes emotions such as :
+          <ul>
+            <li>Anger</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Surprise</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Audio Interview presentation
+      -->
+      <div class="column_home" id="left-col" align="center">
+        <img src = "/static/CSS/images/audio.png" width="100%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Use the audio channel and get a feedback on how the algorithm interprets your vocal emotions compared to other users.</p>
+          <br>
+          <p> Our algorithms categorises vocal emotions into :
+          <ul>
+            <li>Anger</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Surprise</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Text Interview presentation
+      -->
+      <div class="column_home" id="left-col" align="center">
+       <img src = "/static/CSS/images/text.png" width="100%">
+         <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+           <p> Use the text channel and get a feedback on how the algorithm interprets your psychological traits through your writings.</p>
+           <br>
+           <p> The feedback provided consists psychological traits such as :
+           <ul>
+             <li>Openness</li>
+             <li>Conscientiousness</li>
+             <li>Extraversion</li>
+             <li>Agreeableness</li>
+             <li>Neuroticism</li>
+         </ul>
+         <br>
+         </div>
+     </div>
+
+  </div>
+
+
+  <div class="row">
+    <!--
+    Video Interview button
+    -->
+     <div class="column_home" id="left-col" align="center">
+         <form action="/video" method="post" align="center">
+         <input type="submit" name="video" value="Analyse Video" align="center">
+       </form>
+     </div>
+
+     <!--
+     Audio Interview button
+     -->
+     <div class="column_home" id="left-col" align="center">
+         <form action="/audio_index" method="post" align="center">
+         <input type="submit" name="audio_index" value="Analyse Audio" align="center">
+       </form>
+     </div>
+
+    <!--
+     Text Interview button
+     -->
+    <div class="column_home" id="left-col" align="center">
+        <form action="/text" method="post" align="center">
+          <input type="submit" name="text" value="Analyse Text" align="center">
+        </form>
+    </div>
+</div>
+
+
+<br>
+<br>
+
+      {# Fin du bloc "body" #}
+    {% endblock %}
+
+    <br>
+    <br>
+    <a href="/rules">How does it work ?</a>
+    <br>
+    <br>
+
+  </body>
+</html>
